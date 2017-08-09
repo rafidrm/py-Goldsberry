@@ -40,7 +40,7 @@ class PyTest(TestCommand):
 setup(
       name='py-goldsberry',
       version=goldsberry.__version__,
-      url='http://github.com/bradleyfay/py-goldsberry',
+      url='http://github.com/rafidrm/py-goldsberry',
       license='MIT',
       author='Bradley Fay',
       author_email='bradley.fay@gmail.com',
