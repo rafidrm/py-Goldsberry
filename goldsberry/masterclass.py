@@ -1,5 +1,6 @@
 from __future__ import print_function
 import cgi
+import urllib
 import requests as _requests
 
 
@@ -37,7 +38,9 @@ class NbaDataProvider(object):
     def _get_nba_data(self, api_params):
         '''Execute request to nba website and returns json formatted data'''
         base_url = 'http://stats.nba.com/stats/'
-        pull_url = cgi.urlparse.urljoin(base_url, self._url_modifier)
+        # I updated this line.
+        pull_url = urllib.parse.urljoin(base_url, self._url_modifier)
+        # pull_url = cgi.urlparse.urljoin(base_url, self._url_modifier)
         self._response = _requests.get(pull_url, params=api_params,
                                        headers=header_data)
 
